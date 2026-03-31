@@ -1,0 +1,74 @@
+[
+  { 
+    "id": 1, 
+    "name": "Гідрофільна олія Deep Cleanse", 
+    "category": "face", 
+    "needs": ["cleansing"], 
+    "price": 450, 
+    "description": "Розчиняє макіяж та SPF, глибоко очищує пори без відчуття стягнутості.", 
+    "image": "images/Cleansing-Oil.jpg" 
+  },
+  { 
+    "id": 2, 
+    "name": "Зволожуючий тонер Hydration+", 
+    "category": "face", 
+    "needs": ["hydration"], 
+    "price": 380, 
+    "description": "Відновлює pH баланс шкіри та інтенсивно зволожує завдяки гіалуроновій кислоті.", 
+    "image": "images/toner.jpg" 
+  },
+  { 
+    "id": 3, 
+    "name": "Фен BaByliss Smooth Pro 6709DE", 
+    "category": "hair", 
+    "needs": ["curly"], 
+    "price": 1850, 
+    "description": "Професійний фен з дифузором для дбайливого сушіння та ідеальних локонів.", 
+    "image": "images/babyliss-dryer.jpg" 
+  },
+  { 
+    "id": 4, 
+    "name": "Гель для стайлінгу CGM Approved", 
+    "category": "hair", 
+    "needs": ["curly"], 
+    "price": 320, 
+    "description": "Сильна фіксація для кучерявого волосся по Curly Girl Method. Без силіконів та спирту.", 
+    "image": "images/styling-gel.jpg" 
+  },
+  { 
+    "id": 5, 
+    "name": "Фен Remington D6077 One Dry & Style", 
+    "category": "hair", 
+    "needs": ["curly"], 
+    "price": 2100, 
+    "description": "Універсальний фен-стайлер для різних типів укладок та захисту від пересушування.", 
+    "image": "images/remington-dryer.jpg" 
+  },
+  { 
+    "id": 6, 
+    "name": "Ензимна пудра для вмивання", 
+    "category": "face", 
+    "needs": ["cleansing"], 
+    "price": 410, 
+    "description": "М'яка ексфоліація та глибоке очищення шкіри обличчя від змертвілих клітин.", 
+    "image": "images/enzyme-powder.jpg" 
+  },
+  { 
+    "id": 7, 
+    "name": "Зволожуючий Leave-in кондиціонер", 
+    "category": "hair", 
+    "needs": ["curly", "hydration"], 
+    "price": 480, 
+    "description": "Незмивний догляд для живлення та формування чіткого, пружного завитка.", 
+    "image": "images/leave-in.jpg" 
+  },
+  { 
+    "id": 8, 
+    "name": "Базовий крем з керамідами", 
+    "category": "face", 
+    "needs": ["hydration"], 
+    "price": 550, 
+    "description": "Відновлює захисний бар'єр шкіри, надійно утримує вологу протягом дня.", 
+    "image": "images/ceramide-cream.jpg" 
+  }
+]

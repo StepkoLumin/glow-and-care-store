@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow & Care | Магазин косметики</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-container">
+        <span class="animated-logo">Glow & Care.</span>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#">Головна</a></li>
+          <li><a href="#">Обличчя</a></li>
+          <li><a href="#">Волосся</a></li>
+          <li><a href="#">Бренди</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="auth-btn" class="btn-secondary" style="padding: 8px 15px; font-size: 14px; margin-right: 10px;">Увійти</button>
+        
+        <button id="theme-toggle" class="theme-btn" title="Змінити тему">🌙</button>
+        <a href="cart.html" class="cart-link" id="cart-count">Кошик (0)</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1 class="hero-title">Glow & Care.</h1>
+      <p class="hero-subtitle">Підкресли свою природну красу</p>
+    </div>
+  </section>
+
+  <main class="main-container">
+    
+    <aside class="filter-panel">
+      <h2 class="filter-title">Фільтри</h2>
+      
+      <div class="filter-group">
+        <h3>Категорія</h3>
+        <label class="custom-radio">
+          <input type="radio" name="category" value="all" checked> Всі товари
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="category" value="face"> Догляд за обличчям
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="category" value="hair"> Догляд за волоссям
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Потреба</h3>
+        <label class="custom-checkbox">
+          <input type="checkbox" value="hydration"> Зволоження шкіри
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" value="curly"> Для кучерявого волосся
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" value="cleansing"> Глибоке очищення
+        </label>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Ціна (грн)</h3>
+        <div class="price-inputs">
+          <input type="number" placeholder="Від" min="0" class="price-input">
+          <span> - </span>
+          <input type="number" placeholder="До" class="price-input">
+        </div>
+      </div>
+    </aside>
+
+    <section class="products-section">
+      <h1 class="visually-hidden">Каталог косметики</h1>
+      <div id="products-container" class="products-grid">
+        <p class="loading-text">Шукаємо найкращі засоби...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Glow & Care. Всі права захищені.</p>
+  </footer>
+
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <div id="modal-body">
+        </div>
+    </div>
+  </div>
+<div id="auth-modal" class="modal">
+    <div class="modal-content" style="max-width: 400px; text-align: center;">
+      <span class="close-button" id="close-auth-modal">&times;</span>
+      <h2 id="auth-title">Вхід</h2>
+      
+      <form id="auth-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+        <input type="text" id="auth-username" placeholder="Логін" required class="price-input">
+        <input type="email" id="auth-email" placeholder="Email" class="price-input" style="display: none;">
+        <input type="password" id="auth-password" placeholder="Пароль" required class="price-input">
+        
+        <button type="submit" class="btn-buy" style="width: 100%;">Підтвердити</button>
+      </form>
+      
+      <p style="margin-top: 15px; font-size: 14px;">
+        <a href="#" id="toggle-auth-mode" style="color: var(--primary-color); text-decoration: none;">Немає акаунту? Зареєструватися</a>
+      </p>
+    </div>
+  </div>
+  
+  <script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кошик | Glow & Care</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-container">
+        <a href="index.html" style="text-decoration: none;"><span class="animated-logo">Glow & Care.</span></a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="#">Обличчя</a></li>
+          <li><a href="#">Волосся</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <h1 class="cart-title">Ваш кошик</h1>
+
+    <div id="cart-items-container">
+      <p class="loading-text">Завантаження кошика...</p>
+    </div>
+
+    <div id="cart-footer" class="visually-hidden">
+      <div class="cart-summary">
+        Разом: <span id="cart-total">0</span> грн
+      </div>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html" class="btn-secondary">Продовжити покупки</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Glow & Care. Всі права захищені.</p>
+  </footer>
+
+  <script src="cart.js" defer></script>
+</body>
+</html>
