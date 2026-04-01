@@ -30,12 +30,33 @@
       <p class="loading-text">Завантаження кошика...</p>
     </div>
 
-    <div id="cart-footer" class="visually-hidden">
-      <div class="cart-summary">
+<div id="delivery-form" class="visually-hidden" style="background: var(--bg-color); padding: 25px; border-radius: 10px; margin-top: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+      <h3 style="margin-bottom: 20px; color: var(--text-color);">Дані для доставки (Нова Пошта)</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <input type="text" id="order-lastname" placeholder="Прізвище" class="price-input" required>
+        <input type="text" id="order-firstname" placeholder="Ім'я" class="price-input" required>
+        <input type="text" id="order-middlename" placeholder="По батькові" class="price-input">
+        <input type="tel" id="order-phone" placeholder="Телефон (+380...)" class="price-input" required>
+
+        <input type="email" id="order-email" placeholder="Ваш Email (@gmail.com)" class="price-input" required>
+
+<div id="email-error-msg" style="color: #e63946; font-size: 0.85rem; margin-top: -10px; margin-bottom: 10px; display: none; animation: fadeIn 0.3s ease;">
+  ⚠️ Будь ласка, вкажіть дійсну адресу, яка закінчується на <b>@gmail.com</b>
+</div>
+
+        <input type="text" id="order-city" placeholder="Місто" class="price-input" required>
+        <input type="text" id="order-np" placeholder="Номер відділення Нової Пошти" class="price-input" required>
+      </div>
+    </div>
+
+   <div id="cart-footer" class="visually-hidden">
+      <div class="cart-summary" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px; text-align: center;">
         Разом: <span id="cart-total">0</span> грн
       </div>
-      <div style="text-align: center; margin-top: 20px;">
+      <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
         <a href="index.html" class="btn-secondary">Продовжити покупки</a>
+        
+        <button id="checkout-btn" class="btn-buy" style="padding: 10px 20px;">Оформити замовлення</button>
       </div>
     </div>
   </main>
