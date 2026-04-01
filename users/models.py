@@ -17,12 +17,24 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
+STATUS_CHOICES = [
+    ('pending', 'Очікує підтвердження'),
+    ('processing', 'В обробці'),
+    ('shipped', 'Відправлено'),
+    ('delivered', 'Отримано'),
+    ('canceled', 'Скасовано'),
+]
+
+
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
     
-    # --- НОВІ ПОЛЯ ДЛЯ ДОСТАВКИ ---
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending', verbose_name="Статус")
+    
+    # НОВІ ПОЛЯ ДЛЯ ДОСТАВКИ
     last_name = models.CharField(max_length=100, blank=True, null=True, verbose_name="Прізвище")
     first_name = models.CharField(max_length=100, blank=True, null=True, verbose_name="Ім'я")
     middle_name = models.CharField(max_length=100, blank=True, null=True, verbose_name="По батькові")

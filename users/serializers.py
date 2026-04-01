@@ -32,7 +32,7 @@ class OrderSerializer(serializers.ModelSerializer):
         model = Order
         # ДОДАЛИ НОВІ ПОЛЯ В СПИСОК:
         fields = [
-            'id', 'total_price', 'created_at', 'items',
+            'id','status', 'total_price', 'created_at', 'items',
             'last_name', 'first_name', 'middle_name', 
             'phone', 'city', 'nova_poshta'
         ]

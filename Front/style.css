@@ -415,6 +415,7 @@ body {
   margin-bottom: 30px;
   text-align: center;
   color: #333;
+  background-color: #bc8a59;
 }
 
 /* Стиль одного товару в списку кошика */
@@ -709,4 +710,140 @@ body.dark-theme .toast-notification {
     left: 20px;
     justify-content: center;
   }
+}
+
+/* --- СТИЛІ ДЛЯ ОСОБИСТОГО КАБІНЕТУ --- */
+
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.profile-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.loading-text {
+    text-align: center;
+    color: #888;
+}
+
+.order-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.order-status {
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    background: #fdf8f5;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #d4a373;
+    font-weight: bold;
+}
+
+.order-details {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.order-products-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.order-total {
+    text-align: right;
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- ШАПКА КАБІНЕТУ --- */
+.main-header {
+    display: flex;
+    justify-content: space-between; /* Розсуває логотип і меню по різних краях */
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #eee;
+}
+
+.main-header h2 {
+    color: #d4a373;
+    margin: 0;
+}
+
+.header-controls {
+    display: flex;
+    gap: 25px; /* Красива відстань між кнопками */
+    align-items: center;
+}
+
+.header-controls a {
+    color: var(--text-color, #333); /* Підтримує твою темну/світлу тему */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.header-controls a:hover {
+    color: #d4a373; /* Колір змінюється при наведенні мишки */
+}
+
+/* Універсальне виправлення для всіх посилань у шапці */
+.header-inner a, 
+.nav-list a, 
+.header-controls a {
+    text-decoration: none !important; /* Примусово прибираємо підкреслення */
+    color: var(--text-dark) !important; /* Використовуємо твою змінну кольору */
+    font-family: inherit !important;
+    display: flex;
+    align-items: center;
+}
+
+/* Колір при наведенні */
+.header-inner a:hover, 
+.nav-list a:hover, 
+.header-controls a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Вирівнювання всієї правої частини в одну лінію */
+.header-controls, .nav-list {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+/* Стилізація кнопки "Вийти" під твій дизайн */
+#logout-btn {
+    background: var(--text-dark);
+    color: var(--card-bg);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#logout-btn:hover {
+    background: var(--primary-color);
 }

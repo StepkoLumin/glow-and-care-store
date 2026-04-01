@@ -24,3 +24,12 @@ class CreateOrderView(generics.CreateAPIView):
     def perform_create(self, serializer):
         # Автоматично підставляємо користувача, який робить замовлення
         serializer.save(user=self.request.user)
+
+class UserOrdersListView(generics.ListAPIView):
+    serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+    
+        # які належать тому, хто зараз залогінений. order_by('-created_at') сортує від нових до старих.
+        return Order.objects.filter(user=self.request.user).order_by('-created_at')
